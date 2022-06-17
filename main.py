@@ -19,7 +19,7 @@ keywords += list(map(lambda x: x.lower(), keywords))
 
 today = date.today().strftime("%e.%m.%Y").replace(" ", "")
 
-r = requests.get(root_url + path, verify=False)
+r = requests.get(ROOT_URL + PATH, verify=False)
 r = bs(r.text, "html.parser")
 
 last_item = r.table.tbody.find_all(
@@ -43,5 +43,4 @@ for i in last_item:
         if "http" not in url:
             url = root_url + url
         insert_data(title, url, date)
-        break
 con.close()

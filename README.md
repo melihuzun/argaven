@@ -1,2 +1,2 @@
 # argaven
-Scrape notices from table and send message to telegram group
+Scrape notices from html table and send message to telegram group
